@@ -1,0 +1,52 @@
+html[scope="company_landing"] {
+  @include block(landing-figure) {
+		position: relative;
+		left: 50%;
+
+		width: 100vw;
+		height: 320px;
+		
+		text-align: center;
+		margin-left: -50vw;
+		padding: 0 25%;
+		padding-top: spacing(10);
+
+		background-color: #aaa;	
+
+		@include element(title) {
+			margin-bottom: spacing(small);
+
+			font-size: 2.5rem;
+			font-weight: bold;
+
+			color: $word;
+		}	
+
+  	@include element(image) {
+  		
+  	}
+  }	
+}
+
+@include block(user_case) {
+	display: flex;
+	justify-content: space-between;
+
+	padding-top: spacing(small);
+	padding-bottom: spacing(small);
+
+	border-bottom: 1px solid #aaa;
+	
+	@include element(image) {
+		height: 80px;
+	}
+
+	@include element(container) {
+		
+	}
+}
+
+.btn-container {
+	padding-top: spacing(medium);
+	padding-bottom: spacing(medium);
+}

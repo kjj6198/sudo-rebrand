@@ -1,0 +1,22 @@
+@function spacing($amount) {
+	$spacingMap: (
+		small: 4 * $spacing,
+		medium: 8 * $spacing,
+		large: 10 * $spacing
+	);
+  
+  @if(type-of($amount) == 'number') {
+		@return $amount * $spacing;
+  } @else {
+  	@return map-get($spacingMap, $amount);
+  }
+}
+
+@mixin destop($width: 1080px) {
+	@if ($width < 1080px) {
+		@warn "Please enter value more than 1080px";
+	}
+	@media screen and (min-width: $width) {
+		@content;
+	}
+}

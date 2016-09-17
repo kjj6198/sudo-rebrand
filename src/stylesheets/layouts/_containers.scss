@@ -1,0 +1,17 @@
+[layout*="container"] {
+	width: 90%;
+	max-width: 1080px;
+
+	margin: 0 auto;
+}
+
+.page-offset {
+	padding-top: $landingNavHeight;
+}
+
+@for $i from 1 through 100 {
+  [layout*="w-#{$i}"],
+  .w-#{$i} {
+  	width: unquote($i + "%");
+  }
+}

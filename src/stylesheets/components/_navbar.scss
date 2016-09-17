@@ -1,0 +1,28 @@
+
+@include block(landing_navbar) {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: $landingNavHeight;
+
+	padding-left: spacing(3);
+	padding-right: spacing(3);
+
+  color: #f6f6f6;
+
+  background-color: color(deepGray);
+
+  @include element(logo) {
+  	img { max-height: 30px; }
+  	
+  }
+
+  @include element(list) {
+  	> li {
+  	  display: inline-block;
+			margin-right: spacing(small);
+
+			&:last-child { margin-right: 0; }
+  	}
+  }
+}

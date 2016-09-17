@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" scope="company_landing">
+<head>
+	<meta charset="UTF-8">
+	<title>Company Landing</title>
+	<link rel="stylesheet" href="../dist/stylesheets/style.css">
+</head>
+<body>
+	<nav class="landing_navbar">
+		<a class="landing_navbar__logo" href=""><img src="../src/images/sudo-pro@2x.png" alt="Sudo Logo"></a>
+	  <ul class="landing_navbar__list">
+			<li>回 Sudo 找工作</li>
+			<li>申請招募帳號</li>
+			<li><a data-trigger="signInModal" role="button" aria-haspopup="true" aria-expended="false">登入</a></li>
+		</ul>
+	</nav>
+	<div layout="container">
+	  <figure class="landing-figure">
+			<figcaption class="landing-figure__title">全面進入無履歷時代</figcaption>
+			<p>讓工程師用專案與技術主管對話，找人更精準</p>
+			<button class="btn-gradient btn-full-width btn-large">申請招募帳號</button>
+	  </figure>
+	  <div layout="container w-80" class="user_case__container">
+	    <h3 class="u_text-center">看看工程師怎麼說</h3>
+			<section layout="col-12" class="user_case u_text-center">
+				<div layout="flex-2 m-right-small" class="user_case__statement">
+					<img class="user_case__image" src="../src/images/figure-1@2x.png" alt="not">
+					<h4>無履歷，用專案來說話</h4>
+					<p class="u_text-left">制式的履歷表無法展現工程師的實力，就讓他們的專案來說話吧！</p>
+				</div>
+				<div layout="flex-3" class="bubble-dialog">
+				  <div class="bubble-dialog__content">
+				  	<p>制式的履歷表不僅無法呈現我的能力，填寫時又耗時費工。
+團隊真的需要的是我的開發能力，那我覺得直接用專案呈現自己的能力還比較直接。</p>
+				  </div>
+				  <div class="bubble-dialog__user-info">
+						<img src="../src/images/avatar2.jpg" alt="user avatar" class="bubble-dialog__image">
+						<h4 class="user-info__name">Pinky Lin</h4>
+						<span class="user-info__title">前端工程師</span>
+					</div>
+				</div>
+			</section>
+			<section layout="col-12" class="user_case u_text-center">
+				<div layout="flex-2 m-right-small" class="user_case__statement">
+					<img class="user_case__image" src="../src/images/figure-2@2x.png" alt="not">
+					<h4>無履歷，用專案來說話</h4>
+					<p class="u_text-left">制式的履歷表無法展現工程師的實力，就讓他們的專案來說話吧！</p>
+				</div>
+				<div layout="flex-3" class="bubble-dialog">
+				  <div class="bubble-dialog__content">
+				  	<p>面試時人事雖然非常友善，但是我講的很多東西都比較偏向技術，也不知道人事有沒有理解我的能力，感覺講再多都只是浪費時間。應該由技術主管直接面試我。</p>
+				  </div>
+				  <div class="bubble-dialog__user-info">
+						<img src="../src/images/avatar2.jpg" alt="user avatar" class="bubble-dialog__image">
+						<h4 class="user-info__name">JoJo Tsai</h4>
+						<span class="user-info__title">後端工程師</span>
+					</div>
+				</div>
+			</section>
+			<section layout="col-12" class="user_case u_text-center">
+				<div layout="flex-2 m-right-small" class="user_case__statement">
+					<img class="user_case__image" src="../src/images/figure-3@2x.png" alt="not">
+					<h4>無履歷，用專案來說話</h4>
+					<p class="u_text-left">制式的履歷表無法展現工程師的實力，就讓他們的專案來說話吧！</p>
+				</div>
+				<div layout="flex-3" class="bubble-dialog">
+				  <div class="bubble-dialog__content">
+				  	<p>投遞履歷後等了快一個月卻沒有收到回應，我會不知道要不要繼續投遞其他工作機會。說實在的等待一個沒有期限的回應真的耗費時間又很不安。</p>
+				  </div>
+				  <div class="bubble-dialog__user-info">
+						<img src="../src/images/avatar2.jpg" alt="user avatar" class="bubble-dialog__image">
+						<h4 class="user-info__name">John Cena</h4>
+						<span class="user-info__title">iOS 開發工程師</span>
+					</div>
+					<div class="bubble-dialog__content">
+				  	<p>投遞履歷後等了快一個月卻沒有收到回應，我會不知道要不要繼續投遞其他工作機會。說實在的等待一個沒有期限的回應真的耗費時間又很不安。</p>
+				  </div>
+				  <div class="bubble-dialog__user-info">
+						<img src="../src/images/avatar2.jpg" alt="user avatar" class="bubble-dialog__image">
+						<h4 class="user-info__name">葉問</h4>
+						<span class="user-info__title">全端工程師</span>
+					</div>
+				</div>
+			</section>
+	  </div>
+		<div class="btn-container u_text-center">
+		  <button data-trigger="applyModal" aria-expended="false" aria-haspopup="true" class="btn-shadowed btn-large u_font-weight-bold">開始招募工程師</button>
+	  </div>
+	</div>
+<div id="applyModal" role="modal" tabindex="-1" aria-hidden="true" class="normal-modal">
+  <button class="normal-modal__close" aria-label="close">X</button>
+	<div class="normal-modal__content">
+	  <h2 class="normal-modal__title">申請招募帳號前請先同意</h2>
+	  <p>
+	  	<strong>無制式化履歷</strong>
+	  	您使用的招募服務，將不會收到制式化履歷，而是以專案形式展現工程師能力。
+	  	<br>
+	  	<strong>技術主管招募</strong>
+	  	強烈建議技術主管觀看履歷招募，以達到精準的人才招募。
+	  	<br>
+	  	
+	  	<strong>禁止無聲卡產生</strong> 
+	  	為了避免無聲卡產生，求職者投遞履歷後 14 天若沒收到您的回覆，系統將會自動清除該求職者履歷。
+	  	<br>
+	  </p>
+	</div>
+	<div class="normal-modal__action">
+	  <a role="button" href="./company_sign_up.html" class="btn-shadowed btn-full-width">我同意，申請招募帳號</a>
+	</div>
+</div>
+
+<div id="signInModal" role="modal" tabindex="-1" aria-hidden="true" class="normal-modal">
+	<button class="normal-modal__close" aria-label="close">X</button>
+	<div class="normal-modal__content">
+	  <form action="" class="form-fields">
+	    <label for="" class="company_signin__group">
+	      <span class="input-label">招募帳號</span>
+	      <input placeholder="請輸入帳號..." class="u_input-full-width" type="text" />
+	    </label>
+
+	    <label for="" class="company_signin__group">
+	      <span class="input-label">密碼</span>
+	      <input placeholder="請輸入密碼..." class="u_input-full-width" type="password" />
+	    </label>
+	    <span><a href="">忘記密碼？</a></span>
+	    <button class="btn-shadowed btn-full-width" value="登  入">登  入</button>
+	  </form>
+	</div>
+	<div class="normal-form__footer">
+	  <p>還沒有招募帳號？ <a href="./company_sign_up.html">申請招募帳號</a></p>
+	</div>
+</div>
+</body>
+<script src="../src/javascripts/modal.js"></script>
+</html>

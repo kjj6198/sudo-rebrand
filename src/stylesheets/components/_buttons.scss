@@ -1,0 +1,80 @@
+%btn-panel {
+	display: inline-block;
+	padding: 8px 30px;
+	margin-top: 14px;
+	margin-bottom: 14px;
+
+	color: #fff;
+
+	text-transform: uppercase;
+
+	vertical-align: middle;
+	text-align: center;
+
+	font-size: 1em;
+	font-weight: 300;
+	letter-spacing: 2px;
+
+	white-space: nowrap;
+
+	/* remove default border */
+	border: 0;
+	cursor: pointer;
+}
+
+@mixin btn($btn-state) {
+  [role="button"].btn-#{$btn-state},
+  .btn-#{$btn-state} { 
+  	@extend %btn-panel;
+  	@content;
+  }
+}
+
+.btn-full-width {
+	width: 100%;
+}
+
+[class*="btn"].btn-large {
+	padding: spacing(2) spacing(5);
+	font-size: 18px;
+}
+
+.btn-medium {
+
+}
+
+@include btn(shadowed) {
+	background-color: color(sudo);
+	box-shadow: 0 3px 0 darken(color(sudo), 5%);
+	border-radius: 2px;
+	
+	transition: .1s ease-out all;
+
+	&:hover {
+		box-shadow: 0 4px 0 darken(color(sudo), 5%);
+		transform: translateY(-1px);
+		background-color: lighten(color(sudo), 10%);
+	}
+	&:focus {
+		outline: none;
+	}
+	&:active { 
+		outline: none;
+		box-shadow: none;
+		/*
+			traslateY is better than scale it.
+			so change it to translate.
+		*/
+		transform: translateY(2px);
+	}
+	&:visited {
+		
+	}
+}
+
+@include btn(gradient) {
+	border-radius: 1px;
+	background-image: linear-gradient(to bottom, rgba(62, 232, 175, 0.5), rgba(54, 215, 161, 0.68) 11%, color(sudo)), linear-gradient(color(sudo), color(sudo));
+	box-shadow: 0 3px 0 0 #0a8f62;
+
+}

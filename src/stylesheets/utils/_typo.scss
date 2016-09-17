@@ -1,0 +1,25 @@
+$cssRulesMap:(
+  "text-align": (left, center, right),
+  "font-weight": (400, 500, bold),
+  "display": (none, block, inline-block, flex, table),
+  "justify-content": (space-around, space-between, flex-start, flex-end)
+);
+
+@each $key, $valueList in $cssRulesMap {
+	@each $value in $valueList {
+	  @include util(#{$key}-#{$value}, #{$key}, $value);
+	} 
+}
+
+@for $i from 1 through 10 {
+	[layout*="flex-#{$i}"] {
+		flex: #{$i};
+	}
+}
+
+[layout*="m-right-small"] { margin-right: spacing(small); }
+[layout*="m-left-small"] { margin-left: spacing(small); }
+
+@include util(text-center, text-align, center);
+@include util(text-left, text-align, left);
+@include util(text-right, text-align, right);

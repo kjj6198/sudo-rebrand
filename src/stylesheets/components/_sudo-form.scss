@@ -1,0 +1,74 @@
+fieldset { 
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+legend {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.form-fields {
+	label[class*="__group"] {
+		position: relative;
+		display: block;
+		margin-bottom: spacing(3);
+
+		&:last-child { margin-bottom: 0; }
+	}
+
+	[class*="input-label"] {
+		display: block;
+		margin-bottom: spacing(1);
+
+		&:last-child { margin-bottom: 0; }
+	}
+
+	input[type="text"],
+	input[type="tel"],
+	input[type="password"] {
+		padding: spacing(1) spacing(0.5);
+
+		color: color(sudo); // caret color
+		text-shadow: 0 0 0 color(word); // word color
+		text-fill-color: transparent;
+		-webkit-text-fill-color: transparent;
+
+		border: 1px solid lighten(color(word), 50%);
+
+		&::-webkit-input-placeholder {
+			color: color(word);
+			opacity: 0.54;
+		}
+
+		&:focus {
+			border-color: color(sudo);
+			outline: none;
+
+			box-shadow: 0 0 0 2px color(sudo);
+		}
+	}
+
+	@include util(input-full-width, width, 100%);
+
+	[class*="notice"] {
+		display: none;
+	}
+
+	input:focus + [class*="notice"] {
+		display: block;
+		position: absolute;
+		top: 16px * 1.5 + 8px; // font-size * line-height + margin-bottom
+		left: calc(100% + 20px);
+		width: 250px;
+
+		padding: spacing(1) spacing(2);
+
+		background-color: #fff;
+		border: 1px solid color(sudo);
+
+		strong { color: color(highlight); }
+	}
+}
+
