@@ -1,0 +1,20 @@
+{
+  "name": "new_sudo",
+  "description": "rebrand sudo",
+  "main": "index.js",
+  "authors": [
+    "Kalan <kjj6198@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kjj6198/sudo-rebrand",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sexy": "^1.1.0"
+  }
+}
