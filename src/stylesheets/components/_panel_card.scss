@@ -1,0 +1,35 @@
+%card_panel {
+	padding: spacing(small);
+}
+
+.card_container {
+	display: flex;
+	justify-content: space-between;
+
+	> [class*="card"] { 
+		flex-basis: 30%;
+		
+		margin-bottom: spacing(small);
+	}
+}
+
+@include block(card_panel) {
+	@extend %card_panel;
+	@extend .u_text-center;
+
+	@include element(image) {
+		max-width: 50%;
+		margin-bottom: spacing(1);
+	}
+	
+	@include element(title) {
+		font-weight: bold;
+		text-align: center;
+
+		margin: 0;
+	}
+
+	color: color(word);
+	background-color: #ffffff;
+	border: solid 1px #e2e2e2;
+}

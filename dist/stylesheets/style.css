@@ -512,7 +512,7 @@ h1, h2, h3, h4, h5, h6, figcaption, caption, p {
 [layout*="m-left-small"] {
   margin-left: 32px; }
 
-.u_text-center {
+.u_text-center, .card_panel {
   text-align: center; }
 
 .u_text-left, .bubble-dialog__content {
@@ -526,8 +526,11 @@ h1, h2, h3, h4, h5, h6, figcaption, caption, p {
   max-width: 1080px;
   margin: 0 auto; }
 
-.page-offset {
+.page-top-offset {
   padding-top: 48px; }
+
+.page-left-offset {
+  padding-left: 250px; }
 
 [layout*="w-1"],
 .w-1 {
@@ -965,6 +968,21 @@ h1, h2, h3, h4, h5, h6, figcaption, caption, p {
 body[scope="company_signup"] {
   background-color: #fafafa; }
 
+.dashboard-maincontent {
+  background-color: #f3f3f3;
+  overflow: auto;
+  min-height: calc(100vh - 48px); }
+
+.info-menu {
+  position: absolute;
+  top: 48px;
+  bottom: 0;
+  padding: 0 8px;
+  margin: 0;
+  width: 250px;
+  text-align: center;
+  background-color: #fff; }
+
 [role="button"].btn-shadowed,
 .btn-shadowed, [role="button"].btn-gradient,
 .btn-gradient {
@@ -1184,3 +1202,30 @@ legend {
   border: 1px solid #18ad7b; }
   .form-fields input:focus + [class*="notice"] strong {
     color: #fe6565; }
+
+.card_panel {
+  padding: 32px; }
+
+.card_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .card_container > [class*="card"] {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    margin-bottom: 32px; }
+
+.card_panel {
+  color: #3f3f3f;
+  background-color: #ffffff;
+  border: solid 1px #e2e2e2; }
+  .card_panel__image {
+    max-width: 50%;
+    margin-bottom: 8px; }
+  .card_panel__title {
+    font-weight: bold;
+    text-align: center;
+    margin: 0; }

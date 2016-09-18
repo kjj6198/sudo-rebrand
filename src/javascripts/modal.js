@@ -41,9 +41,9 @@ function toggleModal(e) {
 	}
 
 	function closeModal() {
-		console.log(e);
 		targetModal.setAttribute('aria-hidden', true.toString());
 		e.target.setAttribute('aria-expended', false.toString());
+		targetModal.setAttribute('tabindex', '0');
 
 		document.body.style.overflowY = 'auto';
 		
@@ -52,6 +52,7 @@ function toggleModal(e) {
 
 	function openModal() {
 		targetModal.setAttribute('aria-hidden', false.toString());
+		targetModal.setAttribute('tabindex', '0');
 		e.target.setAttribute('aria-expended', true.toString());
 
 		document.body.style.overflowY = 'hidden';

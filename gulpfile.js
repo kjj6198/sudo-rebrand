@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var connect = require('gulp-connect');
+var ejs = require('gulp-ejs');
 
 gulp.task('sass', function() {
   var processor = [autoprefixer];
@@ -10,6 +11,12 @@ gulp.task('sass', function() {
           .pipe(sass().on('error', sass.logError))
           .pipe(postcss(processor))
           .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('build:views', function() {
+  return gulp.src('./views/*.ejs')
+             .pipe(ejs())
+             .pipe(gulp.dest('./views'));
 });
 
 gulp.task('connect', () => {

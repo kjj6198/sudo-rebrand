@@ -1,0 +1,21 @@
+
+.dashboard-maincontent {
+  background-color: #f3f3f3;
+  overflow: auto;
+
+  min-height: calc(100vh - 48px);
+}
+
+@include block(info-menu) {
+  position: absolute;
+  top: $landingNavHeight;
+  bottom: 0;
+  
+  padding: 0 spacing(1);
+  margin: 0;
+
+  width: $menuWidth;
+	
+  text-align: center;
+	background-color: #fff;
+}

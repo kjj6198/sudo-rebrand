@@ -12,6 +12,7 @@
   "devDependencies": {
     "autoprefixer": "/Users/kalan6.4.1",
     "gulp-connect": "/Users/kalan5.0.0",
+    "gulp-ejs": "/Users/kalan2.2.0",
     "gulp-postcss": "/Users/kalan6.2.0",
     "gulp-sass": "/Users/kalan2.3.2"
   }
